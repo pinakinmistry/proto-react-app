@@ -5,9 +5,9 @@ import classes from './Header.scss'
 export const Header = () => (
   <div className={classes.header}>
     <h1>
-      ProtoBot using React + Redux
+      Prototype using React + Redux
       <span className='pull-right'>
-        <IndexLink to='/' activeClassName={classes.activeRoute}>
+        <IndexLink to='/prototype' activeClassName={classes.activeRoute}>
           Home
         </IndexLink>
         {' · '}
