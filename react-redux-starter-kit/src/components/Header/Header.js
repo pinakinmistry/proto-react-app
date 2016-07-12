@@ -7,8 +7,8 @@ export const Header = () => (
     <h1>
       Prototype using React + Redux
       <span className='pull-right'>
-        <IndexLink to='/' activeClassName={classes.activeRoute}>
-          Home
+        <IndexLink to='/prototype' activeClassName={classes.activeRoute}>
+          Prototype
         </IndexLink>
         {' · '}
         <Link to='/preview' activeClassName={classes.activeRoute}>
