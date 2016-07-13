@@ -1,8 +1,8 @@
 import React from 'react'
 import classes from './Prototype.scss'
 
-export const Prototype = (props) => (
-  <div>
+export const Prototype = (props) => {
+  return(<div>
     <div className={classes.imageList}>
         <div id="drop_zone" className={classes.dropzone} onDragOver={handleDragOver} onDrop={handleFileSelect}>
           + Add screen images here to begin with prototyping!
@@ -11,11 +11,11 @@ export const Prototype = (props) => (
     <button className='btn btn-default' onClick={props.addAllImages.bind(props.images)}>
       +
     </button>
-  </div>
-)
+  </div>)
+}
 
 // {props.images.map((image) => {
-//       <img src={image.fileContent} />
+//       <img src={image.imageData} />
 //     })}
 
 // Prototype.propTypes = {
@@ -33,11 +33,12 @@ function handleDragOver(evt) {
 
 let screenId = 0;
 
+export let images = []
+
 function handleFileSelect(evt) {
   evt.stopPropagation()
   evt.preventDefault()
 
-  let images = []
   let files = evt.dataTransfer.files
 
   //requestForFile(() => { console.log('callback for requestForFile')})
@@ -57,17 +58,9 @@ function handleFileSelect(evt) {
         images.push({
           id: id,
           imageName: imageName,
-          writeImageData: e.target.result,
+          imageData: e.target.result,
           hotspots: []
         })
-        // scope.screens[id] = {
-        //     id: id,
-        //     imageName: imageName,
-        //     writeImageData: (function () {
-        //         write(e.target.result, imageName);
-        //     })(),
-        //     hotspots: []
-        // };
         console.log(images)
       };
     })(f);

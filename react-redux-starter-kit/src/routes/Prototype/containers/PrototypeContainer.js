@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-//import { increment, doubleAsync } from '../modules/prototype'
 import { addAllImages } from '../modules/prototype'
+import { images } from 'components/Prototype/Prototype'
 
 /*  This is a container component. Notice it does not contain any JSX,
     nor does it import React. This component is **only** responsible for
@@ -14,8 +14,7 @@ import Prototype from 'components/Prototype'
     implementing our wrapper around increment; the component doesn't care   */
 
 const mapActionCreators = {
-  addAllImages: () => addAllImages(),
-  
+  addAllImages: (images) => addAllImages(images)
 }
 
 const mapStateToProps = (state) => ({

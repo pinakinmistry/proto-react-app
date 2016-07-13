@@ -1,7 +1,6 @@
 // ------------------------------------
 // Constants
 // ------------------------------------
-//export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
 export const ADD_ALL_IMAGES = 'ADD_ALL_IMAGES'
 
 // ------------------------------------
