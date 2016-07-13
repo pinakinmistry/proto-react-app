@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './Prototype.scss'
 
-export const Prototype = (props = {images: []}) => (
+export const Prototype = (props) => (
   <div>
     <div className={classes.imageList}>
         <div id="drop_zone" className={classes.dropzone} onDragOver={handleDragOver} onDrop={handleFileSelect}>
